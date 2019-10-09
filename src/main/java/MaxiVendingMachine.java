@@ -69,8 +69,6 @@ public class MaxiVendingMachine extends VendingMachine {
             throw new InvalidProductException();
         }
     }
-
-
     public static void main(String[] args) {
         MaxiVendingMachine max = new MaxiVendingMachine();
     }

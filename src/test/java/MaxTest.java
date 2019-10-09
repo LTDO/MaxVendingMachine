@@ -1,26 +1,24 @@
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
 import static org.testng.AssertJUnit.assertEquals;
 
-public class MaxTest {
-
+class MaxTest {
     private MaxiVendingMachine product = new MaxiVendingMachine();
     @Test
-    public void shouldTestSoftDrinkCount() {
+    void shouldTestSoftDrinkCount() {
         try {
             SoftDrink sprite = new SoftDrink("Low Sugar Sprite");
             product.buy(sprite);
             product.buy(sprite);
             assertEquals(sprite.getSoftDrinkCount(),3);
-
         } catch (SoftDrinkNotFoundException e) {
             System.out.println("Your thirst can't be quenched :-D");
         }
     }
-
     @Test
-    public void shouldTestSaltySnackCount(){
+    void shouldTestSaltySnackCount(){
         try {
             SaltySnack pretzel = new SaltySnack("Salty Pretzels");
             product.buy(pretzel);
@@ -30,9 +28,8 @@ public class MaxTest {
             System.out.println("Better Luck next time! :-)");
         }
     }
-
     @Test
-    public void shouldTestChocolateCount(){
+    void shouldTestChocolateCount(){
         try {
             Chocolate tex = new Chocolate("Tasty Tex");
             product.buy(tex);
